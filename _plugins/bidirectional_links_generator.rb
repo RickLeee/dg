@@ -23,8 +23,9 @@ class BidirectionalLinksGenerator < Jekyll::Generator
         ).gsub('\_', '[ _]').gsub('\-', '[ -]').capitalize
 
         title_from_data = note_potentially_linked_to.data['title']
+        # p note_potentially_linked_to.data['@page_path']
         if title_from_data
-          puts #{title_from_data}
+          # p title_from_data
           title_from_data = Regexp.escape(title_from_data)
         end
 
